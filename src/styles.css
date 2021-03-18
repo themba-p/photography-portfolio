@@ -1,0 +1,63 @@
+@import "./fonts/fonts.css";
+@import "./colors.css";
+
+@font-face {
+  font-family: "MacklinDisplay";
+  src: url("MacklinDisplay-Medium.otf") format("opentype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  background: #121212;
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #282828;
+  border-radius: 6px;
+  outline: 1px solid #000000;
+}
+
+body {
+  background: #0c0c0c;
+  color: #fff;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  width: 100%;
+  padding: 16px 16px 16px 16px;
+}
+
+.img-container:hover:nth-child(2) ~ .img-container:last-child {
+  transform: translate(-8px, -15px) rotate(-10deg);
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  #root {
+    height: 100%;
+  }
+
+  .App {
+    height: 100%;
+  }
+}
